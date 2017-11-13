@@ -1,0 +1,19 @@
+<h1>Welcome to the longest word game</h1>
+<p>Here is your grid</p>
+<p><% @grid.each do |letter| %>
+  <%= letter %>
+  <% end %></p>
+
+<p><%= @game %></p>
+<p>******************************</p>
+<div class="row">
+  <form action="/score">
+    <label for="question">What is your longest word?</label>
+
+   <!--  <input type="hidden" name="start_time" value="<%= Time.now %>">
+    <input type="hidden" name="grid" value="<%= @grid %>"> -->
+
+    <input type="text" id="guess" name="guess" placeholder="write word here">
+    <input type="submit" value="Go on!">
+  </form>
+</div>
